@@ -16,6 +16,7 @@ public class TicTacToe {
                 {' ', '|', ' ', '|', ' '}};
 
         printBoard(gameBoard);
+        startGame();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -35,6 +36,21 @@ public class TicTacToe {
             System.out.println();
         }
     }
+
+    public static void startGame(){
+       double toss= Math.random();
+       if (toss <0.3){
+           System.out.println("Head : Player Start First");
+       } else if (toss < 0.6) {
+           System.out.println("Tail : Computer Start First");
+       } else if (toss <0.9) {
+           System.out.println("Tail : Player Start First");
+       }
+       else if (toss < 1) {
+            System.out.println("Head : Computer Start First");
+        }
+    }
+
 
 
     public static void choose(char[][] gameBoard, int pos, String user) {
