@@ -18,7 +18,9 @@ public class TicTacToe {
         printBoard(gameBoard);
 
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter a number between 1 to 9");
+
         int playerPos = scanner.nextInt();
 
         choose(gameBoard, playerPos, "player");
@@ -33,6 +35,7 @@ public class TicTacToe {
             System.out.println();
         }
     }
+
 
     public static void choose(char[][] gameBoard, int pos, String user) {
         char symbol = ' ';
